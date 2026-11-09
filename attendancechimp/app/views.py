@@ -117,7 +117,7 @@ def createCourse(request):
             end_time = request.POST['end-time']
         except KeyError:
             return HttpResponse("Error: missing required fields", status=400)
-        if Course.objects.filter(course_name=course_name).exists():
+        if Course.objects.filter(name=course_name).exists():
             return HttpResponse("Error: course name already in use", status=400)
         day_mon = request.POST.get('day-mon', 0)
         day_tue = request.POST.get('day-tue', 0)
