@@ -173,7 +173,7 @@ def createQRCodeUpload(request):
     if request.method != "POST":
         return HttpResponse("Error: only POST is allowed", status=405)
     if is_student(request.user):
-        myimage = request.POST['imageUpload']
+        myimage = request.POST.get('imageUpload')
         my_qr = QRCodeUpload(student = request.user, image=myimage)
         my_qr.save()
         return HttpResponse("QR code saved succesfully", status=200)
