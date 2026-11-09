@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF_8">
+    <meta charset="UTF-8">
     <title>Sign Up – AttendanceChimp</title>
     <style>
-        body { font-family: Arial, sans_serif; text-align: center; margin: 40px; }
-        form { display: inline_block; text-align: left; }
+        body { font-family: Arial, sans-serif; text-align: center; margin: 40px; }
+        form { display: inline-block; text-align: left; }
         label { display: block; margin-top: 10px; }
         input[type="text"], input[type="time"] {
             width: 300px; padding: 5px;
@@ -15,26 +15,26 @@
 <body>
 <h1>Create Course</h1>
 <form action="/app/createCourse" method="post">
-    <label for="course_name">Course Name:</label>
-    <input type="text" id="course_name" name="course_name" required>
+    <label for="course-name">Course Name:</label>
+    <input type="text" id="course-name" name="course-name" required>
 
-    <label for="start_time">Start Time:</label>
-    <input type="time" id="start_time" name="start_time" required>
+    <label for="start-time">Start Time:</label>
+    <input type="time" id="start-time" name="start-time" required>
 
-    <label for="end_time">End Time:</label>
-    <input type="time" id="end_time" name="end_time" required>
+    <label for="end-time">End Time:</label>
+    <input type="time" id="end-time" name="end-time" required>
 
     <label>Days Met:</label>
-    <input type="checkbox" id="day_mon" name="day_mon">
-    <label for="day_mon" style="display:inline">Monday</label>
-    <input type="checkbox" id="day_tue" name="day_tue">
-    <label for="day_tue" style="display:inline">Tuesday</label>
-    <input type="checkbox" id="day_wed" name="day_wed">
-    <label for="day_wed" style="display:inline">Wednesday</label>
-    <input type="checkbox" id="day_thu" name="day_thu">
-    <label for="day_thu" style="display:inline">Thursday</label>
-    <input type="checkbox" id="day_fri" name="day_fri">
-    <label for="day_fri" style="display:inline">Friday</label>
+    <input type="checkbox" id="day-mon" name="day-mon">
+    <label for="day-mon" style="display:inline">Monday</label>
+    <input type="checkbox" id="day-tue" name="day-tue">
+    <label for="day-tue" style="display:inline">Tuesday</label>
+    <input type="checkbox" id="day-wed" name="day-wed">
+    <label for="day-wed" style="display:inline">Wednesday</label>
+    <input type="checkbox" id="day-thu" name="day-thu">
+    <label for="day-thu" style="display:inline">Thursday</label>
+    <input type="checkbox" id="day-fri" name="day-fri">
+    <label for="day-fri" style="display:inline">Friday</label>
 
     <br><br>
     <input type="submit" value="Submit Class">
