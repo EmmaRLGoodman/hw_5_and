@@ -112,18 +112,18 @@ def createCourse(request):
         return HttpResponse("Error: only POST is allowed", status=405)
     if is_instructor(request.user):
         try:
-            course_name = request.POST['course-name']
-            start_time = request.POST['start-time']
-            end_time = request.POST['end-time']
+            course_name = request.POST['course_name']
+            start_time = request.POST['start_time']
+            end_time = request.POST['end_time']
         except KeyError:
             return HttpResponse("Error: missing required fields", status=400)
         if Course.objects.filter(course_name=course_name).exists():
             return HttpResponse("Error: course name already in use", status=400)
-        day_mon = request.POST.get('day-mon', 0)
-        day_tue = request.POST.get('day-tue', 0)
-        day_wed = request.POST.get('day-wed', 0)
-        day_thu = request.POST.get('day-thu', 0)
-        day_fri = request.POST.get('day-fri', 0)
+        day_mon = request.POST.get('day_mon', 0)
+        day_tue = request.POST.get('day_tue', 0)
+        day_wed = request.POST.get('day_wed', 0)
+        day_thu = request.POST.get('day_thu', 0)
+        day_fri = request.POST.get('day_fri', 0)
         if not (day_mon or day_tue or day_wed or day_thu or day_fri):
             return HttpResponse("Error: no days selected", status=400)
         if day_mon != 0:

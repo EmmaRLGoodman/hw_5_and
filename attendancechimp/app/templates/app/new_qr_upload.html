@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>Upload QR Code</h1>
-<form action="/app/createQRCodeUpload" method="post">
+<form action="/app/createQRCodeUpload" method="post", enctype="multipart/form-data">
     <label for="imageUpload">QR Code:</label>
     <input type="file" id="imageUpload" name="imageUpload" required>
 
