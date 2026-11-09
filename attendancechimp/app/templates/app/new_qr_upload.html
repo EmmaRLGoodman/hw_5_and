@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up – AttendanceChimp</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 40px; }
+        form { display: inline-block; text-align: left; }
+        label { display: block; margin-top: 10px; }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 300px; padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Upload QR Code</h1>
+<form action="/app/createQRCodeUpload" method="post">
+    <label for="imageUpload">QR Code:</label>
+    <input type="file" id="imageUpload" name="imageUpload" required>
+
+    <br><br>
+    <input type="submit" value="Submit QR Code">
+</form>
+</body>
+</html>

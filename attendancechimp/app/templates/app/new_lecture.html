@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up – AttendanceChimp</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 40px; }
+        form { display: inline-block; text-align: left; }
+        label { display: block; margin-top: 10px; }
+        input[type="text"]{
+            width: 300px; padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Create Lecture</h1>
+<form action="/app/createLecture" method="post">
+    <label for="choice">Course Name:</label>
+    <input type="text" id="choice" name="choice" required>
+
+    <br><br>
+    <input type="submit" value="Submit Lecture">
+</form>
+</body>
+</html>
