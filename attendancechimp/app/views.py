@@ -188,5 +188,5 @@ def dumpUploads(request):
         return HttpResponse("Error: upload dump may only be accessed by instructors",status=401)
     ret = []
     for upload in QRCodeUpload.objects.all():
-        ret.append({"username": upload.student, "upload_time": upload.uploaded_at})
+        ret.append({"username": upload.student, "upload_time": str(upload.uploaded_at)})
     return JsonResponse(ret, safe=False)
