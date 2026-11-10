@@ -179,3 +179,14 @@ def createQRCodeUpload(request):
         return HttpResponse("QR code saved succesfully", status=200)
     else:
         return HttpResponse("Error: QRs can only be uploaded by students", status=401)
+
+@csrf_exempt
+def dumpUploads(request):
+    if request.method != "GET":
+        return HttpResponse("Error: only GET is allowed", status=405)
+    if not is_instructor(request.user):
+        return HttpResponse("Error: upload dump may only be accessed by instructors",status=401)
+    ret = []
+    for upload in QRCodeUpload.objects.all():
+        ret.append({"username": upload.student, "upload_time": upload.uploaded_at})
+    return JsonResponse(ret, safe=False)
